@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huns n' Roses Booking Inquiry</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        textarea { resize: vertical; } /* Allows users to drag it longer if needed */
+        button { margin-top: 20px; padding: 10px 15px; background: #000; color: #fff; border: none; cursor: pointer; width: 100%; font-size: 16px; }
+        button:hover { background: #333; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Huns n' Roses</h1>
+        <p>Submit your gig details below, and our collective will check availability.</p>
+    </header>
+
+    <main>
+        <form id="bookingForm">
+            <label for="clientName">Your Name / Organisation:</label>
+            <input type="text" id="clientName" name="clientName" required>
+
+            <label for="eventName">Event Name / Venue:</label>
+            <input type="text" id="eventName" name="eventName" required>
+
+            <label for="eventDate">Event Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+
+            <label for="setTime">Set Time & Duration:</label>
+            <input type="text" id="setTime" name="setTime" placeholder="e.g., 22:00 - 00:00" required>
+
+            <label for="budget">Offer Budget (£):</label>
+            <input type="number" id="budget" name="budget" min="0" required>
+
+            <label for="additionalInfo">Additional Information / Requirements:</label>
+            <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Tell us about the vibe, dress code, audio setup, etc..."></textarea>
+
+            <button type="submit">Submit Booking Request</button>
+        </form>
+    </main>
+</body>
+</html>
